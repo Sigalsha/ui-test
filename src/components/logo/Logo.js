@@ -1,6 +1,6 @@
 import React from "react";
 // import { LogoLink } from "react-router-dom";
-import logo from "../../assets/logo192.png";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import Link from "../link/Link";
 import { LogoWrapper, StyledLogo, CompanyName } from "./style";
 import { COMPANY_NAME } from "../../utils/consts";
@@ -9,7 +9,7 @@ const Logo = () => {
   return (
     <Link to="/">
       <LogoWrapper>
-        <StyledLogo src={logo} />
+        <StyledLogo icon={faCircle} />
         <CompanyName>{COMPANY_NAME}</CompanyName>
       </LogoWrapper>
     </Link>

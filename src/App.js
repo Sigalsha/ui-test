@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import BurgerMenu from "./components/burgerMenu/BurgerMenu";
+import Header from "./components/header/Header";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <BurgerMenu />
+        <Header />
       </div>
       <div>
         {/* <Route path="/" exact component={} />

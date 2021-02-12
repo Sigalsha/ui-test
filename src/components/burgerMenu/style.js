@@ -1,5 +1,13 @@
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
+import { fontSizes } from "../../styles/typography";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+export const BurgerMenuContainer = styled.div`
+  display: flex;
+  flex-flow: row-wrap;
+  align-items: center;
+`;
 
 export const BurgerMenuWrapper = styled.div`
   height: 1.5vw;
@@ -7,7 +15,7 @@ export const BurgerMenuWrapper = styled.div`
   -webkit-box-pack: justify;
   justify-content: space-between;
   flex-direction: column;
-  margin: 4vw;
+  margin: 0.8vw;
 `;
 
 export const BurgerLine = styled.div`
@@ -31,3 +39,8 @@ export const BurgerLine = styled.div`
     transform: ${(props) => (props.open ? "rotate(-45deg)" : "rotate(0deg)")};
     transform-origin: bottom left;
   } */
+
+export const Icon = styled(FontAwesomeIcon)`
+  font-size: ${fontSizes.fontXS};
+  color: #2d8cff;
+`;

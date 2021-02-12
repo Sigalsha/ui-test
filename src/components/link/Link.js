@@ -8,7 +8,7 @@ const Link = (props) => {
   return (
     <StyledLink to={props.to}>
       {props.children}
-      {props.src && <Icon {...props.src} />}
+      {props.icon && <Icon icon={props.icon} />}
       {props.name && <LinkTitle>{props.name}</LinkTitle>}
     </StyledLink>
   );

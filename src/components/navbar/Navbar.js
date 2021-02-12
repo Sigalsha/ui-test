@@ -2,22 +2,31 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import Link from "../link/Link";
 import logo from "../../assets/logo192.png";
-
-// import { NAV_LINKS } from "../../utils/consts";
+import {
+  faHome,
+  faEquals,
+  faChartLine,
+  faCalendarAlt,
+  faUser,
+  faCog,
+  faSortDown,
+  faChevronDown,
+  faReply,
+  faClock,
+} from "@fortawesome/free-solid-svg-icons";
 
 const links = [
-  { id: 1, to: "/", name: "Home", icon: "home", src: logo },
-  { id: 2, to: "/workflow", name: "Workflow", icon: "workflow", src: logo },
+  { id: 1, to: "/", name: "Home", icon: faHome },
+  { id: 2, to: "/workflow", name: "Workflow", icon: faEquals },
   {
     id: 3,
     to: "/statistics",
     name: "Statistics",
-    icon: "statistics",
-    src: logo,
+    icon: faChartLine,
   },
-  { id: 4, to: "/calendar", name: "Calendar", icon: "calendar", src: logo },
-  { id: 5, to: "/users", name: "Users", icon: "users", src: logo },
-  { id: 5, to: "/settings", name: "Settings", icon: "settings", src: logo },
+  { id: 4, to: "/calendar", name: "Calendar", icon: faCalendarAlt },
+  { id: 5, to: "/users", name: "Users", icon: faUser },
+  { id: 5, to: "/settings", name: "Settings", icon: faCog },
 ];
 
 const Navbar = () => {
@@ -32,7 +41,6 @@ const Navbar = () => {
                 name={link.name}
                 icon={link.icon}
                 key={link.id}
-                src={link.src}
               ></Link>
             </li>
           );
