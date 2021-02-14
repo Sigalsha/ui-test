@@ -1,7 +1,5 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import Link from "../link/Link";
-import logo from "../../assets/logo192.png";
 import {
   faHome,
   faEquals,
@@ -14,6 +12,8 @@ import {
   faReply,
   faClock,
 } from "@fortawesome/free-solid-svg-icons";
+import logo from "../../assets/logo192.png";
+import Link from "../link/Link";
 
 const links = [
   { id: 1, to: "/", name: "Home", icon: faHome },
@@ -26,7 +26,7 @@ const links = [
   },
   { id: 4, to: "/calendar", name: "Calendar", icon: faCalendarAlt },
   { id: 5, to: "/users", name: "Users", icon: faUser },
-  { id: 5, to: "/settings", name: "Settings", icon: faCog },
+  { id: 6, to: "/settings", name: "Settings", icon: faCog },
 ];
 
 const Navbar = () => {
@@ -35,7 +35,7 @@ const Navbar = () => {
       <ul style={{ textDecoration: "none" }}>
         {links.map((link) => {
           return (
-            <li style={{ textDecoration: "none" }}>
+            <li key={link.id} style={{ textDecoration: "none" }}>
               <Link
                 to={link.to}
                 name={link.name}

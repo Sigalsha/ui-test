@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fontSizes } from "../../styles/typography";
 import { colors } from "../../styles/colors";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const StyledLink = styled(Link)`
   z-index: 999;

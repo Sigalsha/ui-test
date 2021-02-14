@@ -3,8 +3,6 @@ import React from "react";
 import { StyledLink, Icon, LinkTitle } from "./style";
 
 const Link = (props) => {
-  console.log("props from link", props);
-
   return (
     <StyledLink to={props.to}>
       {props.children}

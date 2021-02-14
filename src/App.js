@@ -1,12 +1,17 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import "./App.css";
+import { GlobalStyles } from "./styles/global";
+// import "./App.css";
 import Header from "./components/header/Header";
+import Avatar from "./components/shared/avatar/Avatar";
+import MainPage from "./components/mainPage/MainPage";
 
 function App() {
   return (
     <Router>
+      <GlobalStyles />
       <div className="App">
         <Header />
+        <MainPage />
       </div>
       <div>
         {/* <Route path="/" exact component={} />

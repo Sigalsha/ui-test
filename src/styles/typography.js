@@ -1,5 +1,6 @@
 export const fonts = {
-  fontPrimary: `"MaisonNeueBook", sans-serif`,
+  fontPrimary: `"Montserrat", sans-serif`,
+  // `"MaisonNeueBook", sans-serif`,
 };
 
 export const fontSizes = {

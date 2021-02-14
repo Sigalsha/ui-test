@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { colors } from "../../styles/colors";
 import { fontSizes } from "../../styles/typography";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const BurgerMenuContainer = styled.div`
   display: flex;

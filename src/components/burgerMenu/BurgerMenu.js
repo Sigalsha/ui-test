@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import SideMenu from "../sideMenu/SideMenu";
 import {
   BurgerMenuContainer,
@@ -6,7 +7,6 @@ import {
   BurgerLine,
   Icon,
 } from "./style";
-import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 
 const BurgerMenu = () => {
   const [open, setOpen] = useState(false);

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { fontSizes } from "../../styles/typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fontSizes } from "../../styles/typography";
 import { colors } from "../../styles/colors";
 
 // TODO - add breakpoints

@@ -1,7 +1,7 @@
 import React from "react";
-import { SideMenuWrapper } from "./style";
 import Logo from "../logo/Logo";
 import Navbar from "../navbar/Navbar";
+import { SideMenuWrapper } from "./style";
 
 const SideMenu = (props) => {
   return (
