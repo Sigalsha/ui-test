@@ -7,6 +7,7 @@ import { colors } from "../../styles/colors";
 export const StyledLink = styled(Link)`
   z-index: 999;
   text-decoration: none;
+  padding: ${({ isLogo }) => (isLogo ? "0" : "0 20px")};
 `;
 
 export const Icon = styled(FontAwesomeIcon)`

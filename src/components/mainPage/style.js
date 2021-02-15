@@ -4,8 +4,8 @@ import { fonts } from "../../styles/typography";
 
 export const MainPageWrapper = styled.div`
   transition: margin-left 0.5s;
-  margin-left: ${({ open }) => (open ? "12vw" : "0")};
-  height: 50vw;
+  margin-left: ${({ open }) => (open ? "15vw" : "0")};
+  height: 60vw;
   background-color: ${colors.LIGHT_GREY};
 `;
 

@@ -11,7 +11,6 @@ const Avatar = () => {
       try {
         setIsLoading(true);
         const result = await axios("https://randomuser.me/api/?results=5");
-        console.log("axios res ", result.data.results);
         localStorage.setItem(
           "avatar",
           result.data.results[0].picture.thumbnail

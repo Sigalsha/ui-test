@@ -23,8 +23,6 @@ const Charts = () => {
 };
 
 const Chart = ({ header }) => {
-  console.log(header === CHART_HEADERS[1]);
-
   return (
     <ChartWrapper isReport={header === CHART_HEADERS[1]}>
       <ChartHeader>

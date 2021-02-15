@@ -13,21 +13,23 @@ import Avatar from "../shared/avatar/Avatar";
 import BurgerMenu from "../burgerMenu/BurgerMenu";
 import {
   HeaderWrapper,
+  LeftWrapper,
   StyledIcon,
   AddButton,
   AddButtonIcon,
   Text,
   AvatarButton,
+  ChooseIcon,
 } from "./style";
 
 const Header = () => {
   const { open } = useContext(MenuContext);
   return (
     <HeaderWrapper open={open}>
-      <div style={{ marginRight: "auto" }}>
+      <LeftWrapper>
         <BurgerMenu />
         <StyledIcon icon={faSearch} />
-      </div>
+      </LeftWrapper>
 
       <AddButton>
         <AddButtonIcon icon={faPlus} />
@@ -37,7 +39,7 @@ const Header = () => {
       <StyledIcon icon={faBell} />
       <AvatarButton>
         <Avatar />
-        <StyledIcon icon={faSortDown} />
+        <ChooseIcon icon={faSortDown} />
       </AvatarButton>
     </HeaderWrapper>
   );

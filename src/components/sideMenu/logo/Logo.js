@@ -7,7 +7,7 @@ import { LogoWrapper, StyledLogo, CompanyName } from "./style";
 
 const Logo = () => {
   return (
-    <Link to="/">
+    <Link to="/" isLogo={true}>
       <LogoWrapper>
         <StyledLogo icon={faCircle} />
         <CompanyName>{COMPANY_NAME}</CompanyName>

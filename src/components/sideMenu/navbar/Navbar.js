@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 // import logo from "../../../assets/logo192.png";
 import Link from "../../link/Link";
-import { Styledlist, StyledLi } from "./style";
+import { NavGroup, StyledButton } from "./style";
 
 const links = [
   { id: 1, to: "/", name: "Home", icon: faHome },
@@ -29,20 +29,20 @@ const links = [
 const Navbar = () => {
   return (
     <div>
-      <Styledlist style={{ textDecoration: "none" }}>
+      <NavGroup>
         {links.map((link) => {
           return (
-            <StyledLi key={link.id} style={{ textDecoration: "none" }}>
+            <StyledButton key={link.id}>
               <Link
                 to={link.to}
                 name={link.name}
                 icon={link.icon}
                 key={link.id}
               ></Link>
-            </StyledLi>
+            </StyledButton>
           );
         })}
-      </Styledlist>
+      </NavGroup>
     </div>
   );
 };

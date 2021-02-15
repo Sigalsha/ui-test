@@ -6,7 +6,7 @@ export const SideMenuWrapper = styled.nav`
   flex-direction: column;
   background-color: ${colors.DARK_BLUE};
   height: 100vh;
-  width: 12vw;
+  width: 15vw;
   position: absolute;
   top: 0;
   left: 0;
