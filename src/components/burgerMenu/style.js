@@ -42,5 +42,5 @@ export const BurgerLine = styled.div`
 
 export const Icon = styled(FontAwesomeIcon)`
   font-size: ${fontSizes.fontXS};
-  color: #2d8cff;
+  color: ${colors.MAIN_BLUE};
 `;

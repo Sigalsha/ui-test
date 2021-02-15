@@ -10,7 +10,6 @@ import {
   faSortDown,
   faChevronDown,
   faReply,
-  faClock,
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../assets/logo192.png";
 import Link from "../link/Link";

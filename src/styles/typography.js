@@ -1,10 +1,11 @@
 export const fonts = {
-  fontPrimary: `"Montserrat", sans-serif`,
-  // `"MaisonNeueBook", sans-serif`,
+  fontPrimary: `"MaisonNeueBook", sans-serif`,
+  // `"", sans-serif`,Montserrat
 };
 
 export const fontSizes = {
-  fontXS: `12px`,
+  fontXXS: "9px",
+  fontXS: `11px`,
   fontS: `14px`,
   fontM: `16px`,
   fontL: `24px`,

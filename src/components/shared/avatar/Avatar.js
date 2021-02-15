@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { AvatarWrapper, AvatarImg } from "./style";
+import { div, AvatarImg } from "./style";
 
 const Avatar = () => {
   const [data, setData] = useState([]);
@@ -27,22 +27,13 @@ const Avatar = () => {
   }, []);
 
   return (
-    <AvatarWrapper>
+    <div>
       {!isLoading && data ? (
         <AvatarImg src={localStorage.getItem("avatar")} alt="avatar-image" />
       ) : (
         <div>Loading...</div>
       )}
-      {/*     <ul>
-               {data.map((av) => {
-          return (
-            <li key={av.id.value}>
-              <img src={av.picture.thumbnail} alt="avatar-image" />
-            </li>
-          );
-        })} 
-      </ul> */}
-    </AvatarWrapper>
+    </div>
   );
 };
 
