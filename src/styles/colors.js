@@ -7,5 +7,6 @@ export const colors = {
   DARK_GREY: "grey",
   TRANSPARENT: `transparent`,
   MAIN_BLUE: "#2d8cff",
+  DARK_BLUE: "#001133",
   PINK: "#ff0066",
 };

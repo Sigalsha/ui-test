@@ -7,12 +7,10 @@ import {
   faCalendarAlt,
   faUser,
   faCog,
-  faSortDown,
-  faChevronDown,
-  faReply,
 } from "@fortawesome/free-solid-svg-icons";
-import logo from "../../assets/logo192.png";
-import Link from "../link/Link";
+// import logo from "../../../assets/logo192.png";
+import Link from "../../link/Link";
+import { Styledlist, StyledLi } from "./style";
 
 const links = [
   { id: 1, to: "/", name: "Home", icon: faHome },
@@ -31,20 +29,20 @@ const links = [
 const Navbar = () => {
   return (
     <div>
-      <ul style={{ textDecoration: "none" }}>
+      <Styledlist style={{ textDecoration: "none" }}>
         {links.map((link) => {
           return (
-            <li key={link.id} style={{ textDecoration: "none" }}>
+            <StyledLi key={link.id} style={{ textDecoration: "none" }}>
               <Link
                 to={link.to}
                 name={link.name}
                 icon={link.icon}
                 key={link.id}
               ></Link>
-            </li>
+            </StyledLi>
           );
         })}
-      </ul>
+      </Styledlist>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { colors } from "../../styles/colors";
-import { fontSizes } from "../../styles/typography";
-import Avatar from "../shared/avatar/Avatar";
+import { colors } from "../../../../styles/colors";
+import { fontSizes } from "../../../../styles/typography";
+import Avatar from "../../../shared/avatar/Avatar";
 
 export const ContentRowWrapper = styled.div`
   display: flex;

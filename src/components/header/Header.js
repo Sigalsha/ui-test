@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSearch,
@@ -8,6 +8,7 @@ import {
   faSortDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { BUTTONS_TEXT } from "../../utils/consts";
+import { MenuContext } from "../../contexts/MenuContext";
 import Avatar from "../shared/avatar/Avatar";
 import BurgerMenu from "../burgerMenu/BurgerMenu";
 import {
@@ -20,8 +21,9 @@ import {
 } from "./style";
 
 const Header = () => {
+  const { open } = useContext(MenuContext);
   return (
-    <HeaderWrapper>
+    <HeaderWrapper open={open}>
       <div style={{ marginRight: "auto" }}>
         <BurgerMenu />
         <StyledIcon icon={faSearch} />

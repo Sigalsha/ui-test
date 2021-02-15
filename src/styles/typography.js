@@ -8,7 +8,7 @@ export const fontSizes = {
   fontXS: `11px`,
   fontS: `14px`,
   fontM: `16px`,
-  fontL: `24px`,
+  fontL: `18px`,
   fontXL: `32px`,
   fontXXL: `48px`,
 };

@@ -1,11 +1,13 @@
-import React from "react";
-import Logo from "../logo/Logo";
-import Navbar from "../navbar/Navbar";
+import React, { useContext } from "react";
+import { MenuContext } from "../../contexts/MenuContext";
+import Logo from "./logo/Logo";
+import Navbar from "./navbar/Navbar";
 import { SideMenuWrapper } from "./style";
 
-const SideMenu = (props) => {
+const SideMenu = () => {
+  const { open, onMenuClick } = useContext(MenuContext);
   return (
-    <SideMenuWrapper open={props.open} onClick={props.onClick}>
+    <SideMenuWrapper open={open} onClick={() => onMenuClick()}>
       <Logo />
       <Navbar />
     </SideMenuWrapper>

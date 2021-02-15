@@ -1,6 +1,6 @@
 import React from "react";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { CHART_HEADERS } from "../../utils/consts";
+import { CHART_HEADERS } from "../../../utils/consts";
 import {
   ChartsWrapper,
   ChartWrapper,

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { colors } from "../../styles/colors";
-import { fonts } from "../../styles/typography";
+import { colors } from "../../../styles/colors";
+import { fonts } from "../../../styles/typography";
 
 export const ContentSectionWrapper = styled.div`
   width: 30%;

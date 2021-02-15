@@ -4,7 +4,7 @@ import {
   CONTENT_HEADERS,
   MESSAGES_INFO,
   ACTIVITIES_INFO,
-} from "../../utils/consts";
+} from "../../../utils/consts";
 import {
   ContentSectionWrapper,
   ContentHeader,
@@ -14,7 +14,7 @@ import {
   ContentSectionBody,
   ContentBody,
 } from "./style";
-import ContentRow from "../contentRow/ContentRow";
+import ContentRow from "./contentRow/ContentRow";
 
 const ContentSection = ({ header }) => {
   const getContentTypeByHeader = (header) => {

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { colors } from "../../styles/colors";
-import { fonts, fontSizes } from "../../styles/typography";
+import { colors } from "../../../styles/colors";
+import { fonts, fontSizes } from "../../../styles/typography";
 
 export const ChartsWrapper = styled.div`
   display: flex;

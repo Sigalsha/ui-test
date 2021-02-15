@@ -3,7 +3,8 @@ import { colors } from "../../styles/colors";
 import { fonts } from "../../styles/typography";
 
 export const MainPageWrapper = styled.div`
-  width: 100%;
+  transition: margin-left 0.5s;
+  margin-left: ${({ open }) => (open ? "12vw" : "0")};
   height: 50vw;
   background-color: ${colors.LIGHT_GREY};
 `;

@@ -1,28 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
-import SideMenu from "../sideMenu/SideMenu";
 import {
   BurgerMenuContainer,
   BurgerMenuWrapper,
   BurgerLine,
   Icon,
 } from "./style";
+import { MenuContext } from "../../contexts/MenuContext";
 
 const BurgerMenu = () => {
-  const [open, setOpen] = useState(false);
+  const { onMenuClick, open } = useContext(MenuContext);
 
   return (
     <div>
-      <BurgerMenuContainer open={open} onClick={() => setOpen(!open)}>
+      <BurgerMenuContainer open={open} onClick={() => onMenuClick()}>
         <Icon icon={faCaretLeft} open={open} />
 
         <BurgerMenuWrapper open={open}>
-          <BurgerLine open={open}></BurgerLine>
-          <BurgerLine open={open}></BurgerLine>
-          <BurgerLine open={open}></BurgerLine>
+          <BurgerLine></BurgerLine>
+          <BurgerLine></BurgerLine>
+          <BurgerLine></BurgerLine>
         </BurgerMenuWrapper>
       </BurgerMenuContainer>
-      <SideMenu open={open}></SideMenu>
     </div>
   );
 };

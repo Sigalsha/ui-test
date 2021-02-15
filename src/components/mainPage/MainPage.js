@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { getTitle, CONTENT_HEADERS } from "../../utils/consts";
-import ContentSection from "../contentSection/ContentSection";
-import Charts from "../charts/Charts";
+import ContentSection from "./contentSection/ContentSection";
+import Charts from "./charts/Charts";
 import { MainPageWrapper, MainPageTitle, SectionsWrapper } from "./style";
+import { MenuContext } from "../../contexts/MenuContext";
 
 const MainPage = () => {
+  const { open } = useContext(MenuContext);
   return (
-    <MainPageWrapper>
+    <MainPageWrapper open={open}>
       <MainPageTitle>{getTitle("John")}</MainPageTitle>
       <Charts />
       <SectionsWrapper>

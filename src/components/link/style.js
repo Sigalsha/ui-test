@@ -7,15 +7,15 @@ import { colors } from "../../styles/colors";
 export const StyledLink = styled(Link)`
   z-index: 999;
   text-decoration: none;
-  color: inherit;
 `;
 
 export const Icon = styled(FontAwesomeIcon)`
-  font-size: ${fontSizes.fontM};
-  color: ${colors.BLACK};
+  font-size: ${fontSizes.fontS};
+  color: ${colors.MAIN_BLUE};
+  margin-right: 10px;
 `;
 
 export const LinkTitle = styled.span`
   font-size: ${fontSizes.fontM};
-  color: ${colors.BLACK};
+  color: ${colors.WHITE};
 `;

@@ -4,14 +4,19 @@ import { GlobalStyles } from "./styles/global";
 import Header from "./components/header/Header";
 import Avatar from "./components/shared/avatar/Avatar";
 import MainPage from "./components/mainPage/MainPage";
+import MenuContextProvider from "./contexts/MenuContext";
+import SideMenu from "./components/sideMenu/SideMenu";
 
 function App() {
   return (
     <Router>
       <GlobalStyles />
       <div className="App">
-        <Header />
-        <MainPage />
+        <MenuContextProvider>
+          <Header />
+          <SideMenu></SideMenu>
+          <MainPage />
+        </MenuContextProvider>
       </div>
       <div>
         {/* <Route path="/" exact component={} />

@@ -9,6 +9,8 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   justify-content: space-evenly;
   padding: 30px;
+  transition: margin-left 0.5s;
+  margin-left: ${({ open }) => (open ? "12vw" : "0")};
 `;
 
 export const StyledIcon = styled(FontAwesomeIcon)`
