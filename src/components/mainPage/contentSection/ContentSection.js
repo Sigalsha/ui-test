@@ -4,6 +4,8 @@ import {
   CONTENT_HEADERS,
   MESSAGES_INFO,
   ACTIVITIES_INFO,
+  sumDelayedTasks,
+  getStatsFromContent,
 } from "../../../utils/consts";
 import {
   ContentSectionWrapper,
@@ -11,7 +13,6 @@ import {
   SectionHeader,
   BadgesWrapper,
   StyledBadge,
-  ContentSectionBody,
   ContentBody,
 } from "./style";
 import ContentRow from "./contentRow/ContentRow";
@@ -35,16 +36,15 @@ const ContentSection = ({ header }) => {
       <ContentBody>
         {data.map((item, i) => {
           return (
-            <ContentSectionBody key={i}>
-              <ContentRow
-                key={i}
-                item={item}
-                isAvatar={item.isAvatar}
-                title={item.title}
-                activityType={item.activityType}
-                message={item.message}
-              />
-            </ContentSectionBody>
+            <ContentRow
+              key={i}
+              item={item}
+              isAvatar={item.isAvatar}
+              title={item.title}
+              activityType={item.activityType}
+              message={item.message}
+              isMsgRead={item.isRead}
+            />
           );
         })}
       </ContentBody>
@@ -53,11 +53,13 @@ const ContentSection = ({ header }) => {
 
   return (
     <ContentSectionWrapper>
-      <ContentHeader>
+      <ContentHeader isActivity={header === CONTENT_HEADERS[2]}>
         <SectionHeader>{header}</SectionHeader>
         <BadgesWrapper>
-          <StyledBadge />
-          {header === CONTENT_HEADERS[0] && <StyledBadge isDelay={true} />}
+          <StyledBadge>{getStatsFromContent(header)}</StyledBadge>
+          {header === CONTENT_HEADERS[0] && (
+            <StyledBadge isDelay={true}>{sumDelayedTasks().length}</StyledBadge>
+          )}
         </BadgesWrapper>
       </ContentHeader>
 

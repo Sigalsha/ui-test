@@ -9,8 +9,10 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   justify-content: space-evenly;
   transition: margin-left 0.5s;
-  margin: 10px 20px;
-  margin-left: ${({ open }) => (open ? "16vw" : "20px")};
+  padding: 10px 20px;
+  margin-left: ${({ open }) => (open ? "15.25vw" : "0")};
+  border-bottom: 0.8px solid ${colors.BORDER_GREY};
+  background-color: ${colors.WHITE};
 `;
 
 export const LeftWrapper = styled.div`

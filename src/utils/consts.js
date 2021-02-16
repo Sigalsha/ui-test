@@ -106,27 +106,46 @@ export const MESSAGES_INFO = [
     timestamp: getTimestamps(5, "minutes"),
     message: `Hey You! It's me again :) I attached new(...)`,
     isAvatar: true,
+    isRead: false,
   },
   {
     name: "Nina Jones",
     timestamp: `About ${getTimestamps(20, "hours")}`,
     message: "Hey! I attached new PSD files for(...)",
     isAvatar: true,
+    isRead: false,
   },
   {
     name: "James Smith",
     timestamp: getTimestamps(2, "days"),
     message: "Good morning, you are fired!",
     isAvatar: true,
+    isRead: true,
   },
   {
     name: "Nina Jones",
     timestamp: `About ${getTimestamps(2, "weeks")}`,
     message: "Hello! Could You bring me coffee please?",
     isAvatar: true,
+    isRead: true,
   },
 ];
 
 // export const CONTENT_NUMBERS = [{ type: 'Tasks', timeout: 5, delay: 2 }, { type: 'Messages', timeout: 2 }]
 
 export const getTitle = (name) => `Hello ${name}!`;
+
+export const sumDelayedTasks = () => TASKS_INFO.filter((task) => task.isDelay);
+
+export const getStatsFromContent = (contentType) => {
+  switch (contentType) {
+    case "Tasks":
+      return 5;
+    case "Messages":
+      return MESSAGES_INFO.filter((msg) => !msg.isRead).length;
+    case "Activity":
+      return 10;
+    default:
+      return 5;
+  }
+};

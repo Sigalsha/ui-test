@@ -21,7 +21,7 @@ export const BurgerMenuWrapper = styled.div`
 export const BurgerLine = styled.div`
   background-color: ${colors.BLACK};
   height: 0.25vw;
-  width: 2vw;
+  width: 1.8vw;
   align-self: center;
   transition: all linear;
 `;

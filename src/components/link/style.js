@@ -17,6 +17,6 @@ export const Icon = styled(FontAwesomeIcon)`
 `;
 
 export const LinkTitle = styled.span`
-  font-size: ${fontSizes.fontM};
+  font-size: ${fontSizes.fontS};
   color: ${colors.WHITE};
 `;

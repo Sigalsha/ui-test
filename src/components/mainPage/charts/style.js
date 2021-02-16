@@ -7,7 +7,8 @@ export const ChartsWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   text-decoration: none;
-  margin: 20px 0;
+  margin: 15px 0 20px 0;
+  height: 30vh;
 `;
 
 export const ChartWrapper = styled.div`
@@ -17,6 +18,7 @@ export const ChartWrapper = styled.div`
   background-color: ${colors.WHITE};
   display: flex;
   flex-flow: row wrap;
+  align-items: start;
 `;
 
 export const ChartHeader = styled.div`
@@ -36,11 +38,11 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   background-color: ${colors.TRANSPARENT};
-  width: 12vw;
+  width: 14vw;
   height: 3vw;
   border-radius: 20px;
   border: 1px solid ${colors.GREY};
-  margin: 0 10px;
+  margin: 0 10px 0 auto;
 `;
 
 export const Text = styled.p`
@@ -51,12 +53,13 @@ export const Text = styled.p`
 `;
 
 export const TimeText = styled(Text)`
-  color: ${colors.GREY};
+  color: ${colors.DARK_GREY};
   font-weight: normal;
+  margin-right: 2px;
 `;
 
 export const Icon = styled(FontAwesomeIcon)`
-  font-size: ${fontSizes.fontM};
-  color: ${colors.GREY};
-  margin: 0 5px;
+  font-size: ${fontSizes.fontXXS};
+  color: ${colors.DARK_GREY};
+  margin: 0 5px 0 15px;
 `;

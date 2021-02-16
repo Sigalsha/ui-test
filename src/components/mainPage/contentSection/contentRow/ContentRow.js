@@ -13,12 +13,28 @@ import {
   Dotes,
   RowInfoWrapper,
   MessageInfoWrapper,
+  VerticalLine,
 } from "./style";
 
-const ContentRow = ({ title, item, isAvatar, activityType, message }) => {
+const ContentRow = ({
+  title,
+  item,
+  isAvatar,
+  activityType,
+  message,
+  isMsgRead,
+}) => {
   return (
-    <ContentRowWrapper>
-      {isAvatar ? <StyledAvatar /> : <StyledBadge>{title[0]}</StyledBadge>}
+    <ContentRowWrapper
+      isNewMsg={message && !isMsgRead}
+      isMessage={message}
+      isActivity={activityType}
+    >
+      {isAvatar ? (
+        <StyledAvatar isActivity={activityType} />
+      ) : (
+        <StyledBadge>{title[0]}</StyledBadge>
+      )}
       <div>
         {message && (
           <RowInfoWrapper isMessage={true}>

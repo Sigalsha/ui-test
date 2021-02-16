@@ -7,7 +7,7 @@ export const NavGroup = styled.div`
 `;
 
 export const StyledButton = styled.button`
-  padding: 30px 0;
+  padding: 25px 0;
   width: 100%;
   text-align: left;
   border: none;

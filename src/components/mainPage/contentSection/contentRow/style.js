@@ -6,9 +6,13 @@ import Avatar from "../../../shared/avatar/Avatar";
 
 export const ContentRowWrapper = styled.div`
   display: flex;
-  flex-flow: row wrap;
-  padding: 10px 15px;
+  padding: ${({ isMessage }) => (isMessage ? `10px 15px 5px 15px` : "15px")};
+  width: 100%;
+  border-top: ${({ isActivity }) =>
+    isActivity ? `none` : `0.8px solid ${colors.BORDER_GREY}`};
   font-size: ${fontSizes.fontXS};
+  background-color: ${({ isNewMsg }) =>
+    isNewMsg ? `${colors.LIGHT_GREY}` : "inherit"};
 `;
 
 export const StyledAvatar = styled(Avatar)`
@@ -20,11 +24,12 @@ export const StyledBadge = styled.div`
   background-color: ${colors.MAIN_BLUE};
   color: ${colors.WHITE};
   text-transform: uppercase;
-  width: 2.8vw;
-  height: 2.8vw;
+  width: 2.5vw;
+  height: 2.5vw;
   text-align: center;
   padding-top: 6px;
-  font-size: ${fontSizes.fontS};
+  font-size: ${fontSizes.fontS2};
+  font-weight: bold;
   margin-right: 15px;
 `;
 
@@ -55,6 +60,13 @@ export const RowInfo = styled.p`
   line-height: ${({ isActivity }) => (isActivity ? `0` : `1.5`)}; ;
 `;
 
+export const VerticalLine = styled.hr`
+  border: none;
+  border-left: 1px solid ${colors.BORDER_GREY};
+  width: 1px;
+  height: 5vh;
+`;
+
 export const Timestamp = styled.div`
   display: flex;
   align-items: center;
@@ -66,9 +78,11 @@ export const Timestamp = styled.div`
 
 export const Icon = styled(FontAwesomeIcon)`
   color: ${({ isMessage }) => (isMessage ? `${colors.DARK_GREY}` : `inherit`)};
-  font-size: ${fontSizes.fontXS};
+  font-size: ${({ isMessage }) =>
+    isMessage ? `${fontSizes.fontXXS}` : `${fontSizes.fontXS}`};
   margin-right: ${({ isMessage }) => (isMessage ? `10px` : `5px`)};
-  margin-top: ${({ isMessage }) => (isMessage ? `5px` : `0`)}; ;
+  margin-top: ${({ isMessage }) => (isMessage ? `5px` : `0`)};
+  cursor: ${({ isMessage }) => (isMessage ? `pointer` : `unset`)};
 `;
 
 export const DotesButton = styled.button`

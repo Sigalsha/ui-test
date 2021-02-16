@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { div, AvatarImg } from "./style";
 
-const Avatar = () => {
+const Avatar = ({ isActivity }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -28,7 +28,11 @@ const Avatar = () => {
   return (
     <div>
       {!isLoading && data ? (
-        <AvatarImg src={localStorage.getItem("avatar")} alt="avatar-image" />
+        <AvatarImg
+          src={localStorage.getItem("avatar")}
+          alt="avatar-image"
+          isActivity={isActivity}
+        />
       ) : (
         <div>Loading...</div>
       )}
