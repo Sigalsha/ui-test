@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { colors } from "./colors";
+import { device } from "./devices";
 
 export const GlobalStyles = createGlobalStyle`
   html, body {

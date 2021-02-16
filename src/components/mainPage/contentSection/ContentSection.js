@@ -1,11 +1,9 @@
 import React from "react";
 import {
-  TASKS_INFO,
   CONTENT_HEADERS,
-  MESSAGES_INFO,
-  ACTIVITIES_INFO,
   sumDelayedTasks,
   getStatsFromContent,
+  getContentTypeByHeader,
 } from "../../../utils/consts";
 import {
   ContentSectionWrapper,
@@ -18,19 +16,6 @@ import {
 import ContentRow from "./contentRow/ContentRow";
 
 const ContentSection = ({ header }) => {
-  const getContentTypeByHeader = (header) => {
-    switch (header) {
-      case "Tasks":
-        return TASKS_INFO;
-      case "Messages":
-        return MESSAGES_INFO;
-      case "Activity":
-        return ACTIVITIES_INFO;
-      default:
-        return TASKS_INFO;
-    }
-  };
-
   const generateContentSectionBody = (data) => {
     return (
       <ContentBody>

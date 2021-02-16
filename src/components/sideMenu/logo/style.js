@@ -2,14 +2,21 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fontSizes } from "../../../styles/typography";
 import { colors } from "../../../styles/colors";
-
-// TODO - add breakpoints
+import { device } from "../../../styles/devices";
 
 export const LogoWrapper = styled.div`
   display: inline-flex;
   align-items: center;
   padding: 0;
-  margin: 20px 0 20px 30px;
+  margin: 10% 0 10% 15%;
+
+  @media ${device.mobileS} {
+    margin: 10% 15%;
+  }
+
+  @media ${device.tablet} {
+    margin: 10% 0 10% 15%;
+  }
 `;
 
 export const StyledLogo = styled(FontAwesomeIcon)`
@@ -21,10 +28,26 @@ export const StyledLogo = styled(FontAwesomeIcon)`
   padding: 0.5em 0.5em;
   background-image: linear-gradient(to right, #07689f, #43658b);
   margin-right: 10px;
+
+  @media ${device.mobileS} {
+    display: none;
+  }
+
+  @media ${device.mobileL} {
+    display: unset;
+  }
 `;
 
 export const CompanyName = styled.span`
   font-weight: 600;
   font-size: ${fontSizes.fontL};
   color: ${colors.WHITE};
+
+  @media ${device.mobileS} {
+    font-size: ${fontSizes.fontXS};
+  }
+
+  @media ${device.tablet} {
+    font-size: ${fontSizes.fontM};
+  }
 `;

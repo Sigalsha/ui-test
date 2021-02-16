@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../../styles/colors";
-import { fonts, fontSizes } from "../../../styles/typography";
+import { fontSizes } from "../../../styles/typography";
+import { device } from "../../../styles/devices";
 
 export const ContentSectionWrapper = styled.div`
   width: 30%;
@@ -9,6 +10,16 @@ export const ContentSectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   max-height: 45vh;
+
+  @media ${device.mobileS} {
+    width: auto;
+    margin: 2%;
+  }
+
+  @media ${device.tablet} {
+    width: 30%;
+    margin: 2% 0;
+  }
 `;
 
 export const ContentHeader = styled.div`
@@ -20,6 +31,10 @@ export const ContentHeader = styled.div`
 
   border-bottom: ${({ isActivity }) =>
     isActivity ? `0.8px solid ${colors.BORDER_GREY}` : `none`};
+
+  @media ${device.mobileS} {
+    padding: 2px 15px;
+  }
 `;
 
 export const SectionHeader = styled.h5`
@@ -43,6 +58,40 @@ export const StyledBadge = styled.div`
   margin: 0 5px;
   font-size: ${fontSizes.fontS};
   font-weight: 550;
+
+  @media ${device.mobileS} {
+    width: 7vw;
+    height: 7vw;
+    font-size: ${fontSizes.fontXS};
+  }
+
+  @media ${device.mobileM} {
+    padding-top: 6px;
+  }
+
+  @media ${device.mobileL} {
+    padding-top: 7px;
+    width: 5.5vw;
+    height: 5.5vw;
+    font-size: 12px;
+  }
+
+  @media ${device.tablet} {
+    width: 2.8vw;
+    height: 2.8vw;
+    padding-top: 4px;
+    font-size: ${fontSizes.fontS};
+  }
+
+  @media ${device.laptopL} {
+    width: 2vw;
+    height: 2vw;
+    font-size: ${fontSizes.fontS2};
+  }
+
+  @media ${device.laptop} {
+    padding: 8px;
+  }
 `;
 
 export const ContentBody = styled.div`

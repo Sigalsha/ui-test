@@ -2,17 +2,32 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { colors } from "../../../../styles/colors";
 import { fontSizes } from "../../../../styles/typography";
+import { device } from "../../../../styles/devices";
 import Avatar from "../../../shared/avatar/Avatar";
 
 export const ContentRowWrapper = styled.div`
   display: flex;
-  padding: ${({ isMessage }) => (isMessage ? `10px 15px 5px 15px` : "15px")};
+  padding: ${({ isMessage, isActivity }) =>
+    isMessage ? `10px 15px` : isActivity ? `10px 0 10px 5px` : "15px"};
   width: 100%;
   border-top: ${({ isActivity }) =>
     isActivity ? `none` : `0.8px solid ${colors.BORDER_GREY}`};
   font-size: ${fontSizes.fontXS};
   background-color: ${({ isNewMsg }) =>
     isNewMsg ? `${colors.LIGHT_GREY}` : "inherit"};
+
+  @media ${device.mobileS} {
+    padding: 10px 15px;
+  }
+
+  @media ${device.mobileM} {
+    padding: ${({ isMessage }) => (isMessage ? `5px 15px` : "10px 15px")};
+  }
+
+  @media ${device.tablet} {
+    padding: ${({ isMessage, isActivity }) =>
+      isMessage ? `10px 15px` : isActivity ? `10px 0 10px 10px` : "15px"};
+  }
 `;
 
 export const StyledAvatar = styled(Avatar)`
@@ -31,11 +46,43 @@ export const StyledBadge = styled.div`
   font-size: ${fontSizes.fontS2};
   font-weight: bold;
   margin-right: 15px;
+
+  @media ${device.mobileS} {
+    width: 7vw;
+    height: 7vw;
+    font-size: ${fontSizes.fontXS};
+  }
+
+  @media ${device.mobileM} {
+    padding-top: 7px;
+  }
+
+  @media ${device.mobileL} {
+    width: 5.5vw;
+    height: 5.5vw;
+    font-size: 12px;
+    padding-top: 2%;
+  }
+
+  @media ${device.tablet} {
+    width: 2.8vw;
+    height: 2.8vw;
+    font-size: ${fontSizes.fontS2};
+  }
+
+  @media ${device.laptop} {
+    padding: 8px;
+  }
+
+  @media ${device.laptopL} {
+    width: 2vw;
+    height: 2vw;
+  }
 `;
 
 export const RowInfoWrapper = styled.div`
   display: inline-flex;
-  flex-direction: ${({ isMessage }) => (isMessage ? "column" : "row")};
+  flex-flow: ${({ isMessage }) => (isMessage ? "column wrap" : "row wrap")};
   font-size: 10px;
 `;
 
@@ -52,12 +99,21 @@ export const RowTitle = styled.div`
 
 export const RowInfo = styled.p`
   font-size: ${fontSizes.fontXXS};
-  margin: ${({ isMessageName }) => (isMessageName ? `0 5px 0 2px` : `0 2px`)};
+  margin: ${({ isMessageName }) =>
+    isMessageName ? `0 5px 0 2px` : `0 0 0 2px`};
   font-weight: ${({ isActivityType, isMessage }) =>
     !isActivityType && !isMessage ? "bold" : "inherit"};
   color: ${({ isActivityType }) =>
     isActivityType ? `${colors.DARK_GREY}` : "inherit"};
-  line-height: ${({ isActivity }) => (isActivity ? `0` : `1.5`)}; ;
+  line-height: 1.5;
+
+  @media ${device.mobileM} {
+    font-size: ${fontSizes.fontXXS2};
+  }
+
+  @media ${device.tablet} {
+    font-size: ${fontSizes.fontXXS};
+  }
 `;
 
 export const VerticalLine = styled.hr`
@@ -83,13 +139,16 @@ export const Icon = styled(FontAwesomeIcon)`
   margin-right: ${({ isMessage }) => (isMessage ? `10px` : `5px`)};
   margin-top: ${({ isMessage }) => (isMessage ? `5px` : `0`)};
   cursor: ${({ isMessage }) => (isMessage ? `pointer` : `unset`)};
+
+  @media ${device.laptopL} {
+    margin-top: ${({ isMessage }) => (isMessage ? `3px` : `0`)};
+  }
 `;
 
 export const DotesButton = styled.button`
   background-color: ${colors.TRANSPARENT};
   border-color: ${colors.TRANSPARENT};
   margin-left: auto;
-  margin-right: 5px;
 `;
 
 export const Dotes = styled.div`
@@ -99,4 +158,19 @@ export const Dotes = styled.div`
   align-self: center;
   margin: 3px 0;
   border-radius: 50%;
+
+  @media ${device.mobileS} {
+    height: 1vw;
+    width: 1vw;
+  }
+
+  @media ${device.tablet} {
+    height: 0.4vw;
+    width: 0.4vw;
+  }
+
+  @media ${device.laptopL} {
+    height: 0.3vw;
+    width: 0.3vw;
+  }
 `;

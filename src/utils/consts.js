@@ -131,8 +131,6 @@ export const MESSAGES_INFO = [
   },
 ];
 
-// export const CONTENT_NUMBERS = [{ type: 'Tasks', timeout: 5, delay: 2 }, { type: 'Messages', timeout: 2 }]
-
 export const getTitle = (name) => `Hello ${name}!`;
 
 export const sumDelayedTasks = () => TASKS_INFO.filter((task) => task.isDelay);
@@ -147,5 +145,18 @@ export const getStatsFromContent = (contentType) => {
       return 10;
     default:
       return 5;
+  }
+};
+
+export const getContentTypeByHeader = (header) => {
+  switch (header) {
+    case "Tasks":
+      return TASKS_INFO;
+    case "Messages":
+      return MESSAGES_INFO;
+    case "Activity":
+      return ACTIVITIES_INFO;
+    default:
+      return TASKS_INFO;
   }
 };
