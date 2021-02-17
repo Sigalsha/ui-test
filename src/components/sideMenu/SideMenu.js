@@ -5,8 +5,8 @@ import Navbar from "./navbar/Navbar";
 import { SideMenuWrapper } from "./style";
 
 const SideMenu = () => {
-  const { open, onMenuClick } = useContext(MenuContext);
-  //  onClick={() => onMenuClick()}
+  const { open } = useContext(MenuContext);
+
   return (
     <SideMenuWrapper open={open}>
       <Logo />

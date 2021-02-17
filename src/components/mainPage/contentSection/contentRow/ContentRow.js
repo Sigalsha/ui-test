@@ -1,6 +1,5 @@
 import React from "react";
 import { faClock, faReply, faCog } from "@fortawesome/free-solid-svg-icons";
-// import Avatar from "../../shared/avatar/Avatar";
 import {
   ContentRowWrapper,
   StyledBadge,
@@ -13,7 +12,6 @@ import {
   Dotes,
   RowInfoWrapper,
   MessageInfoWrapper,
-  VerticalLine,
 } from "./style";
 
 const ContentRow = ({

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { div, AvatarImg } from "./style";
+import { AvatarImg } from "./style";
+
+const URL = "https://randomuser.me/api/?results=5";
 
 const Avatar = ({ isActivity }) => {
   const [data, setData] = useState([]);
@@ -10,7 +12,7 @@ const Avatar = ({ isActivity }) => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const result = await axios("https://randomuser.me/api/?results=5");
+        const result = await axios(URL);
         localStorage.setItem(
           "avatar",
           result.data.results[0].picture.thumbnail
@@ -23,6 +25,7 @@ const Avatar = ({ isActivity }) => {
     };
 
     fetchData();
+    return () => setIsLoading(false);
   }, []);
 
   return (

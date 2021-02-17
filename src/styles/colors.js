@@ -8,5 +8,7 @@ export const colors = {
   TRANSPARENT: `transparent`,
   MAIN_BLUE: "#2d8cff",
   DARK_BLUE: "#001133",
+  LOGO_BLUE: "#004d99",
+  FOCUS_BLUE: "rgba(0, 51, 153, 0.5)",
   PINK: "#ff0066",
 };

@@ -7,6 +7,14 @@ export const MainPageWrapper = styled.div`
   transition: margin-left 0.5s;
   margin-left: ${({ open }) => (open ? "15vw" : "0")};
   background-color: ${colors.LIGHT_GREY};
+
+  @media ${device.mobileS} {
+    margin-left: ${({ open }) => (open ? "25.5vw" : "0")};
+  }
+
+  @media ${device.tablet} {
+    margin-left: ${({ open }) => (open ? "15.5vw" : "0")};
+  }
 `;
 
 export const MainPageTitle = styled.h1`

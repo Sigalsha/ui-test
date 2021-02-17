@@ -6,24 +6,40 @@ import { colors } from "../../styles/colors";
 import { device } from "../../styles/devices";
 
 export const StyledLink = styled(Link)`
-  z-index: 999;
   text-decoration: none;
-  padding: ${({ isLogo }) => (isLogo ? "0" : "0 20px")};
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-left: ${({ isActiveRoute, isLogo }) =>
+    isActiveRoute && !isLogo ? `4px solid ${colors.MAIN_BLUE}` : `none`};
+  background-color: ${({ isActiveRoute, isLogo }) =>
+    isActiveRoute && !isLogo ? `${colors.FOCUS_BLUE}` : `${colors.DARK_BLUE}`};
+  cursor: pointer;
+  padding: ${({ isLogo }) => (isLogo ? "0" : `15%`)};
+
+  &:hover {
+    opacity: ${({ isLogo }) => (isLogo ? "none" : `0.8`)};
+    border: ${({ isLogo }) => (isLogo ? "inherit" : `none`)};
+  }
+
+  &:focus {
+    border-left: ${({ isLogo }) =>
+      isLogo ? `none` : `4px solid ${colors.MAIN_BLUE}`};
+    background-color: ${({ isLogo }) =>
+      isLogo ? `${colors.DARK_BLUE}` : `${colors.FOCUS_BLUE}`};
+    outline: none;
+  }
 
   @media ${device.mobileS} {
-    padding: ${({ isLogo }) => (isLogo ? "0" : "0 5px")};
+    padding: ${({ isLogo }) => (isLogo ? "0" : `15% 2%`)};
   }
 
   @media ${device.mobileM} {
-    padding: ${({ isLogo }) => (isLogo ? "0" : "0 10px")};
+    padding: ${({ isLogo }) => (isLogo ? "0" : `15% 10%`)};
   }
 
   @media ${device.mobileL} {
-    padding: ${({ isLogo }) => (isLogo ? "0" : "0 15px")};
-  }
-
-  @media ${device.tablet} {
-    padding: ${({ isLogo }) => (isLogo ? "0" : "0 20px")};
+    padding: ${({ isLogo }) => (isLogo ? "0" : `15%`)};
   }
 `;
 

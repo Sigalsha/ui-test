@@ -18,7 +18,7 @@ export const ContentSectionWrapper = styled.div`
 
   @media ${device.tablet} {
     width: 30%;
-    margin: 2% 0;
+    margin: 0.5% 0;
   }
 `;
 
@@ -60,37 +60,17 @@ export const StyledBadge = styled.div`
   font-weight: 550;
 
   @media ${device.mobileS} {
-    width: 7vw;
-    height: 7vw;
+    width: 25px;
+    height: 25px;
+    padding-top: 6px;
     font-size: ${fontSizes.fontXS};
   }
 
-  @media ${device.mobileM} {
-    padding-top: 6px;
-  }
-
-  @media ${device.mobileL} {
-    padding-top: 7px;
-    width: 5.5vw;
-    height: 5.5vw;
-    font-size: 12px;
-  }
-
   @media ${device.tablet} {
-    width: 2.8vw;
-    height: 2.8vw;
-    padding-top: 4px;
+    width: 30px;
+    height: 30px;
+    padding-top: 7px;
     font-size: ${fontSizes.fontS};
-  }
-
-  @media ${device.laptopL} {
-    width: 2vw;
-    height: 2vw;
-    font-size: ${fontSizes.fontS2};
-  }
-
-  @media ${device.laptop} {
-    padding: 8px;
   }
 `;
 

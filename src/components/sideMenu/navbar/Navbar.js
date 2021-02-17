@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import {
   faHome,
   faEquals,
@@ -8,9 +7,8 @@ import {
   faUser,
   faCog,
 } from "@fortawesome/free-solid-svg-icons";
-// import logo from "../../../assets/logo192.png";
 import Link from "../../link/Link";
-import { NavGroup, StyledButton } from "./style";
+import { NavGroup } from "./style";
 
 const links = [
   { id: 1, to: "/", name: "Home", icon: faHome },
@@ -32,14 +30,13 @@ const Navbar = () => {
       <NavGroup>
         {links.map((link) => {
           return (
-            <StyledButton key={link.id}>
-              <Link
-                to={link.to}
-                name={link.name}
-                icon={link.icon}
-                key={link.id}
-              ></Link>
-            </StyledButton>
+            <Link
+              to={link.to}
+              name={link.name}
+              icon={link.icon}
+              key={link.id}
+              isLogo={false}
+            ></Link>
           );
         })}
       </NavGroup>

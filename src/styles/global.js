@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 import { colors } from "./colors";
-import { device } from "./devices";
 
 export const GlobalStyles = createGlobalStyle`
   html, body {
@@ -16,11 +15,11 @@ export const GlobalStyles = createGlobalStyle`
   body {
     width: 100%;
     text-rendering: optimizeLegibility;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "MaisonNeueBook", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
   
   button {
     cursor: pointer;
   }
-  
   `;

@@ -39,6 +39,12 @@ export const StyledIcon = styled(FontAwesomeIcon)`
   cursor: pointer;
 `;
 
+export const RightWrapper = styled.div`
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+`;
+
 export const AddButton = styled.button`
   display: flex;
   justify-content: center;
@@ -67,7 +73,7 @@ export const AddButton = styled.button`
 
   @media ${device.tablet} {
     width: 14.6vw;
-    height: 3.5vw;
+    height: 3.3vw;
     margin: 0 30px 0 10px;
     padding-right: 15px;
   }

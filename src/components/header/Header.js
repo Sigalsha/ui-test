@@ -20,6 +20,7 @@ import {
   Text,
   AvatarButton,
   ChooseIcon,
+  RightWrapper,
 } from "./style";
 
 const Header = () => {
@@ -31,16 +32,18 @@ const Header = () => {
         <StyledIcon icon={faSearch} />
       </LeftWrapper>
 
-      <AddButton>
-        <AddButtonIcon icon={faPlus} />
-        <Text>{BUTTONS_TEXT.headerBtn}</Text>
-      </AddButton>
-      <StyledIcon icon={faEnvelope} />
-      <StyledIcon icon={faBell} />
-      <AvatarButton>
-        <Avatar />
-        <ChooseIcon icon={faSortDown} />
-      </AvatarButton>
+      <RightWrapper>
+        <AddButton>
+          <AddButtonIcon icon={faPlus} />
+          <Text>{BUTTONS_TEXT.headerBtn}</Text>
+        </AddButton>
+        <StyledIcon icon={faEnvelope} />
+        <StyledIcon icon={faBell} />
+        <AvatarButton>
+          <Avatar />
+          <ChooseIcon icon={faSortDown} />
+        </AvatarButton>
+      </RightWrapper>
     </HeaderWrapper>
   );
 };

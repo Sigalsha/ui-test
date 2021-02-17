@@ -18,7 +18,7 @@ export const ChartsWrapper = styled.div`
   }
 
   @media ${device.tablet} {
-    height: 30vh;
+    height: 35vh;
     flex-flow: row;
   }
 `;
@@ -42,6 +42,7 @@ export const ChartWrapper = styled.div`
 
   @media ${device.tablet} {
     width: ${({ isReport }) => (isReport ? "55%" : "37.5%")};
+    margin: 0.5% 2.5%;
   }
 `;
 

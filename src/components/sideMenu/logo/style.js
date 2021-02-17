@@ -19,15 +19,17 @@ export const LogoWrapper = styled.div`
   }
 `;
 
-export const StyledLogo = styled(FontAwesomeIcon)`
-  font-size: ${fontSizes.fontXS};
-  color: ${colors.WHITE};
-  display: inline-block;
-  border-radius: 50px;
-  box-shadow: 0px 0px 2px #888;
-  padding: 0.5em 0.5em;
-  background-image: linear-gradient(to right, #07689f, #43658b);
-  margin-right: 10px;
+export const LogoContainer = styled.div`
+  position: relative;
+  margin-right: 5px;
+  width: 2.8vw;
+  height: 2.8vw;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to left,
+    ${colors.LOGO_BLUE} 10%,
+    ${colors.MAIN_BLUE} 90%
+  );
 
   @media ${device.mobileS} {
     display: none;
@@ -36,6 +38,28 @@ export const StyledLogo = styled(FontAwesomeIcon)`
   @media ${device.mobileL} {
     display: unset;
   }
+
+  @media ${device.laptop} {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+
+  @media ${device.laptopL} {
+    width: 2.2vw;
+    height: 2.2vw;
+    margin-right: 10px;
+  }
+`;
+
+export const Circle = styled.div`
+  background-color: ${colors.DARK_BLUE};
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  right: 6px;
+  left: 6px;
+  border-radius: inherit;
 `;
 
 export const CompanyName = styled.span`

@@ -1,12 +1,12 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
+import { MenuContext } from "../../contexts/MenuContext";
 import {
   BurgerMenuContainer,
   BurgerMenuWrapper,
   BurgerLine,
   Icon,
 } from "./style";
-import { MenuContext } from "../../contexts/MenuContext";
 
 const BurgerMenu = () => {
   const { onMenuClick, open } = useContext(MenuContext);

@@ -22,12 +22,12 @@ export const BurgerMenuWrapper = styled.div`
     height: 2.5vw;
   }
 
-  @media ${device.laptop} {
-    height: 1.3vw;
-  }
-
   @media ${device.tablet} {
     height: 1.45vw;
+  }
+
+  @media ${device.laptop} {
+    height: 1.3vw;
   }
 `;
 

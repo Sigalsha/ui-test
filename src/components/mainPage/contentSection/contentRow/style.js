@@ -48,35 +48,17 @@ export const StyledBadge = styled.div`
   margin-right: 15px;
 
   @media ${device.mobileS} {
-    width: 7vw;
-    height: 7vw;
+    width: 25px;
+    height: 25px;
+    padding-top: 6px;
     font-size: ${fontSizes.fontXS};
   }
 
-  @media ${device.mobileM} {
-    padding-top: 7px;
-  }
-
-  @media ${device.mobileL} {
-    width: 5.5vw;
-    height: 5.5vw;
-    font-size: 12px;
-    padding-top: 2%;
-  }
-
   @media ${device.tablet} {
-    width: 2.8vw;
-    height: 2.8vw;
     font-size: ${fontSizes.fontS2};
-  }
-
-  @media ${device.laptop} {
-    padding: 8px;
-  }
-
-  @media ${device.laptopL} {
-    width: 2vw;
-    height: 2vw;
+    width: 30px;
+    height: 30px;
+    padding-top: 7px;
   }
 `;
 
@@ -137,7 +119,8 @@ export const Icon = styled(FontAwesomeIcon)`
   font-size: ${({ isMessage }) =>
     isMessage ? `${fontSizes.fontXXS}` : `${fontSizes.fontXS}`};
   margin-right: ${({ isMessage }) => (isMessage ? `10px` : `5px`)};
-  margin-top: ${({ isMessage }) => (isMessage ? `5px` : `0`)};
+  margin-top: 0;
+
   cursor: ${({ isMessage }) => (isMessage ? `pointer` : `unset`)};
 
   @media ${device.laptopL} {

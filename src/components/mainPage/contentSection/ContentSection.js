@@ -5,6 +5,7 @@ import {
   getStatsFromContent,
   getContentTypeByHeader,
 } from "../../../utils/consts";
+import ContentRow from "./contentRow/ContentRow";
 import {
   ContentSectionWrapper,
   ContentHeader,
@@ -13,7 +14,6 @@ import {
   StyledBadge,
   ContentBody,
 } from "./style";
-import ContentRow from "./contentRow/ContentRow";
 
 const ContentSection = ({ header }) => {
   const generateContentSectionBody = (data) => {
