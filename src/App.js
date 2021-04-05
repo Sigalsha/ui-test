@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import MenuContextProvider from "./contexts/MenuContext";
 import { GlobalStyles } from "./styles/global";
 import Landing from "./components/routeComponents/Landing";
